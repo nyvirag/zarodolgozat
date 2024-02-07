@@ -7254,6 +7254,11 @@
   "resolved" "https://registry.npmjs.org/react-native-shake/-/react-native-shake-4.0.2.tgz"
   "version" "4.0.2"
 
+"react-native-shapes@^0.1.0":
+  "integrity" "sha512-5EHcc/Burlvp2UdfzT+EkQqGn7WO6SQGxZ9w0/4BWYMB/bShA8/lnhuWgxQz+IxZwxnzPkYiR4zCS2NlQQJGig=="
+  "resolved" "https://registry.npmjs.org/react-native-shapes/-/react-native-shapes-0.1.0.tgz"
+  "version" "0.1.0"
+
 "react-native-svg@^14.1.0", "react-native-svg@>=6.2.1":
   "integrity" "sha512-HeseElmEk+AXGwFZl3h56s0LtYD9HyGdrpg8yd9QM26X+d7kjETrRQ9vCjtxuT5dCZEIQ5uggU1dQhzasnsCWA=="
   "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-14.1.0.tgz"

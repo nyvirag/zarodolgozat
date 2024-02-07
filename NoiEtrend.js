@@ -28,6 +28,8 @@ const KeresesSzoveg = () => {
     }
   };
 
+
+  //picker tartalma
   const izomcsopi = async () => {
     try {
       const response = await fetch(Ipcim.Ipcim + 'sulyok');
