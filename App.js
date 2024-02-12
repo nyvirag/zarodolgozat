@@ -30,6 +30,10 @@ import Kedveles from './Kedveles'
 import Csevego from './Csevego'
 import Ido from './Ido'
 import IdoButton from './IdoButton'
+import Blog from './Blog'
+import NoiKategoria from './NoiKategoria'
+import FerfiKategoria from './FerfiKategoria'
+
 
 
 
@@ -111,6 +115,11 @@ function Vissza({ navigation }) {
       <Drawer.Screen name="Stopper" component={Ido} />
       <Drawer.Screen name="Gym Motivation Music" component={Video} />
       <Drawer.Screen name="Készítők" component={Keszitok} />
+      <Drawer.Screen name="Blog" component={Blog} />
+      <Drawer.Screen name="Női kategória" component={NoiKategoria} />
+      <Drawer.Screen name="Férfi kategória" component={FerfiKategoria} />
+
+
 
 
 
@@ -239,5 +248,3 @@ export default function App() {
 const styles = StyleSheet.create({
 
 });
-
-
