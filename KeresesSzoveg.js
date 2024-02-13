@@ -15,6 +15,8 @@ const KeresesSzoveg = () => {
   const [izomcsoportdata, setizomcsoportData] = useState([]);
   const [kivalasztott, kivalasztottData] = useState();
   const [pressedItems, setPressedItems] = useState({});
+  const [isFav, setIsFav]=useState(false)
+
 
   const getMovies = async () => {
     try {
@@ -71,11 +73,15 @@ const KeresesSzoveg = () => {
 
 
   const kedveles = async (id) => {
-    alert(id)
-    setPressedItems(prevState => ({
-      ...prevState,
-      [id]: !prevState[id] // Inverzálja az állapotot a lenyomott elem indexén
+    alert("Sikeresen hozzáadva a kedvencekhez!")
+
+    
+    setPressedItems(elozoallapot => ({
+     ...elozoallapot,
+     [id]: !elozoallapot[id] // Inverzálás: arra utal, hogy egy adott művelet hatását vagy eredményét megfordítjuk vagy visszavonjuk
     }));
+  
+
     var adatok = {
       "bevitel1": id
     }
