@@ -12,13 +12,13 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 
 
-import Kep4 from './Kep4';
+
 import NoiEtrend from './NoiEtrend';
-import ProbaFeltoltes from './ProbaFeltoltes'
+
 import { colors } from './Cons';
 import KozosScreen from './KozosScreen'
 import FerfiEtrend from './FerfiEtrend'
-import Ujlap from './Ujlap'
+
 import Video from './Video'
 import Lepes from './Lepes'
 import KeresesSzoveg from './KeresesSzoveg'
