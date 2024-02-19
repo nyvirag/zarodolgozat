@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, Text, View, TextInput, Button, Image, StyleSheet, Pressable}  from 'react-native';
+import { ActivityIndicator, FlatList, Text, View, TextInput, Button, Image, StyleSheet, Pressable, SectionList}  from 'react-native';
 
 import { Picker } from '@react-native-picker/picker';
 import Ipcim from './Ipcim';
@@ -7,6 +7,7 @@ import { colors } from './Cons';
 import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
 import { block, color } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-navigation';
+
 
 const KeresesSzoveg = () => {
   const [isLoading, setLoading] = useState(true);
@@ -81,14 +82,17 @@ const KeresesSzoveg = () => {
     <ScrollView>
 
 
-      <View style={{ flex: 1, padding: 24,  }}>
+      <View style={{ flex: 1, padding: 24, marginTop:50 }}>
         <Picker
+        style={{}}
           selectedValue={kivalasztott}
+          mode='dropdown'
+          dropdownIconColor={colors.sotetlime}
           onValueChange={(itemValue, itemIndex) =>
             kivalasztottData(itemValue)
 
           }
-          style={{  }}
+        
         >
 
 
@@ -96,7 +100,7 @@ const KeresesSzoveg = () => {
           {etrendData.map((item) => {
             return (
 
-              <Picker.Item label={item.suly_fajta} value={item.suly_id} color="white" />
+              <Picker.Item style={{backgroundColor:colors.black}} label={item.suly_fajta} value={item.suly_id} color="white" />
             )
           }
           )}

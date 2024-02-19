@@ -75,11 +75,14 @@ const KeresesSzoveg = () => {
       
 
 
-      <View style={{ flex: 1, padding: 24,  }}>
+      <View style={{ flex: 1, padding: 24, marginTop:50 }}>
         <Picker
           selectedValue={kivalasztott}
+          mode='dropdown'
+          dropdownIconColor={colors.sotetlime}
           onValueChange={(itemValue, itemIndex) =>
             kivalasztottData(itemValue)
+            
 
           }
           style={{  }}
@@ -90,7 +93,7 @@ const KeresesSzoveg = () => {
           {etrendData.map((item) => {
             return (
 
-              <Picker.Item label={item.suly_fajta} value={item.suly_id} color="white" />
+              <Picker.Item  style={{backgroundColor:colors.black}} label={item.suly_fajta} value={item.suly_id} color="white" />
             )
           }
           )}

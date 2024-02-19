@@ -6,6 +6,8 @@ import {colors} from './Cons'
 import { ScrollView } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import { TapGestureHandler, RotationGestureHandler, GestureHandlerRootView, NativeViewGestureHandler } from 'react-native-gesture-handler'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const KeresesSzoveg = () => {
   const [isLoading, setLoading] = useState(true);
@@ -53,7 +55,30 @@ const KeresesSzoveg = () => {
   }, []);
 
 
+  const torles = (szam) => {
+    // alert(szam)
+     
+     
  
+ 
+       var bemenet = {
+         bevitel1: szam
+       }
+ 
+       fetch(Ipcim.Ipcim + "torles", {
+         method: "DELETE",
+         body: JSON.stringify({bevitel1:szam}),
+         headers: { "Content-type": "application/json; charset=UTF-8" }
+       }
+ 
+       )
+         .then(x => x.text())
+         .then(y => {
+           alert(y)
+           izomcsopi()
+         });
+     
+   }
 
 
 
@@ -110,6 +135,13 @@ const KeresesSzoveg = () => {
 
 
             <Image source={{ uri: Ipcim.Ipcim+item.gyakorlat_img }} style={{ width: 125, height: 125, marginBottom:15, marginTop:10, borderRadius:10  }}/>
+
+            <Pressable onPress={async () => torles(item.kedvenc_id)} >
+            <MaterialCommunityIcons name="delete-outline" color="red" size={40} marginTop={5} marginBottom={50} />
+            </Pressable>
+
+
+
             
 
          

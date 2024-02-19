@@ -15,7 +15,7 @@ const KeresesSzoveg = () => {
   const [izomcsoportdata, setizomcsoportData] = useState([]);
   const [kivalasztott, kivalasztottData] = useState();
   const [pressedItems, setPressedItems] = useState({});
-  const [isFav, setIsFav]=useState(false)
+
 
 
   const getMovies = async () => {
@@ -75,12 +75,12 @@ const KeresesSzoveg = () => {
   const kedveles = async (id) => {
     alert("Sikeresen hozzáadva a kedvencekhez!")
 
-    
+
     setPressedItems(elozoallapot => ({
-     ...elozoallapot,
-     [id]: !elozoallapot[id] // Inverzálás: arra utal, hogy egy adott művelet hatását vagy eredményét megfordítjuk vagy visszavonjuk
+      ...elozoallapot,
+      [id]: !elozoallapot[id] // Inverzálás: arra utal, hogy egy adott művelet hatását vagy eredményét megfordítjuk vagy visszavonjuk
     }));
-  
+
 
     var adatok = {
       "bevitel1": id
@@ -106,9 +106,12 @@ const KeresesSzoveg = () => {
       <ScrollView>
 
 
-        <View style={{ flex: 1, padding: 24 }}>
+        <View style={{ flex: 1, padding: 24, marginTop: 50 }}>
           <Picker
+
             selectedValue={kivalasztott}
+            mode='dropdown'
+            dropdownIconColor={colors.sotetlime}
             onValueChange={(itemValue, itemIndex) =>
               kivalasztottData(itemValue)
 
@@ -119,7 +122,7 @@ const KeresesSzoveg = () => {
             {izomcsoportdata.map((item) => {
               return (
 
-                <Picker.Item label={item.izomcsoport_nev} value={item.izomcsoport_id} color="white" />
+                <Picker.Item style={{ backgroundColor: colors.black }} label={item.izomcsoport_nev} value={item.izomcsoport_id} color="white" />
               )
             }
             )}
@@ -152,7 +155,7 @@ const KeresesSzoveg = () => {
           ) : (
             <FlatList
               data={data}
-              keyExtractor={({ gyakorlat_id }) => gyakorlat_id.toString}
+              keyExtractor={({ gyakorlat_id }) => gyakorlat_id.toString()}
               renderItem={({ item }) => (
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                   <View style={{ flexDirection: 'row', alignItems: 'center', color: colors.feher }}>
@@ -165,16 +168,23 @@ const KeresesSzoveg = () => {
                   <Text style={{ fontSize: 20, textAlign: 'center', color: colors.feher }}>
                     {item.gyakorlat_leiras}
                   </Text>
-                  <Image source={{ uri: Ipcim.Ipcim + item.gyakorlat_img }} style={{ width: 125, height: 125, marginBottom: 15, marginTop: 10, borderRadius: 10 }} />
+                  <Image source={{ uri: Ipcim.Ipcim + item.gyakorlat_img }} style={{ width: 130, height: 130, marginBottom: 15, marginTop: 10, borderRadius: 10 }} />
 
 
 
 
-                  <Pressable onPress={() => kedveles(item.gyakorlat_id)} >
-                  
-                      <Heart size={5} color={pressedItems[item.gyakorlat_id] ? colors.sotetlime : colors.feher} style={{ marginBottom: 20, }}>
-                      </Heart>
-                    
+                  <Pressable onPress={() => kedveles(item.gyakorlat_id)} onPressIn={() => setPressedItems(prevState => ({
+                    ...prevState,
+                    [item.gyakorlat_id]: true
+                  }))}
+                    onPressOut={() => setPressedItems(prevState => ({
+                      ...prevState,
+                      [item.gyakorlat_id]: false
+                    }))}>
+
+                    <Heart size={5} color={pressedItems[item.gyakorlat_id] ? colors.sotetlime : colors.feher} style={{ marginBottom: 20, }}>
+                    </Heart>
+
 
 
 
