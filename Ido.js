@@ -107,7 +107,7 @@ export default function Ido() {
 
 
                     })} >
-                        <Text style={{ fontSize: 25, color: colors.feher, textAlign: 'center', padding: 13, paddingHorizontal: 140 }} > Újrakezd</Text>
+                        <Text style={{ fontSize: 25, color: colors.feher, textAlign: 'center', padding: 13, paddingHorizontal: 120 }} > Újrakezd</Text>
                     </Pressable>
 
                     <CountdownCircleTimer

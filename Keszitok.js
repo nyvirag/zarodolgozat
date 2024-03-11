@@ -27,7 +27,7 @@ const Teglalap = () => {
 
     <View style={styles.teglalap} >
         <Text style={{alignSelf:'center', marginTop:40, color:colors.feher, }}>
-          Nyisztor Virág
+          Nyisztor Virág Márta
         </Text>
     </View>
 

@@ -98,7 +98,7 @@ const KeresesSzoveg = () => {
               <View style={{flex: 1, height: 1, backgroundColor:colors.feher,}} />
 
 
-            <Text style={{ fontSize:30, textAlign:'center', paddingHorizontal:8, color:colors.feher}}>
+            <Text style={{ fontSize:30, textAlign:'center', paddingHorizontal:8, color:colors.feher, }}>
           {formatum (item.blog_datum)}
             </Text>
 
@@ -110,7 +110,7 @@ const KeresesSzoveg = () => {
 
 
 
-            <Text style={{fontSize:20, textAlign:'center', color:colors.feher}}>
+            <Text style={{fontSize:20, textAlign:'center', color:colors.feher, marginBottom:40}}>
               {item.blog_uzenet}
             </Text>
 

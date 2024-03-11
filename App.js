@@ -5,8 +5,6 @@ import { Button, View, StyleSheet, Text, ImageBackground, Pressable } from 'reac
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { TapGestureHandler, RotationGestureHandler, GestureHandlerRootView, NativeViewGestureHandler } from 'react-native-gesture-handler'
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
@@ -14,15 +12,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 
 import NoiEtrend from './NoiEtrend';
-
 import { colors } from './Cons';
-import KozosScreen from './KozosScreen'
 import FerfiEtrend from './FerfiEtrend'
-
 import Video from './Video'
-import Lepes from './Lepes'
 import KeresesSzoveg from './KeresesSzoveg'
-import { color } from 'react-native-reanimated';
+
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Keszitok from './Keszitok'
@@ -41,8 +35,8 @@ import FerfiKategoria from './FerfiKategoria'
 
 function HomeScreen({ navigation }) {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.black }}>
+    
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.feher }}>
 
 
         <Text style={{
@@ -77,7 +71,7 @@ function HomeScreen({ navigation }) {
 
 
       </View>
-    </GestureHandlerRootView>
+  
   );
 }
 
@@ -162,9 +156,9 @@ const Tab = createBottomTabNavigator();
 const MyTheme = {
   ...DefaultTheme,
   colors: {
-    background: colors.black,
-    primary: colors.black,
-    card: colors.black,
+    background: colors.feher,
+    primary: colors.feher,
+    card: colors.feher,
     text: colors.sotetlime,
     border: colors.sotetlime,
 
@@ -193,40 +187,41 @@ export default function App() {
           shadowOffset: { width: -2, height: 4 },
           shadowOpacity: 0.4,
           shadowRadius: 3,
+          
+          
 
-
-
-        }
+        }, 
+       
       }} >
         <Tab.Screen name="otthon" initialRouteName="Home" component={Vissza} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="arrow-left-bottom" color={color} size={26} marginTop={11} />
-          ),
+            <MaterialCommunityIcons name="arrow-left-bottom" color={color} size={26} marginBottom={-40} />
+          )
         }} />
         <Tab.Screen name="Gyakorlatok" component={KeresesSzoveg} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="dumbbell" color={color} size={26} marginTop={11} />
-          ),
+            <MaterialCommunityIcons name="dumbbell" color={color} size={26}  marginBottom={-40}  />
+          )
         }} />
         <Tab.Screen name="Étrendek" component={NoiEtrend} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="human-female" color={color} size={26} marginTop={11} />
-          ),
+            <MaterialCommunityIcons name="human-female" color={color} size={26}   marginBottom={-40} />
+          )
         }} />
         <Tab.Screen name="Ferfi" component={FerfiEtrend} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="human-male" color={color} size={26} marginTop={11} />
-          ),
+            <MaterialCommunityIcons name="human-male" color={color} size={26}  marginBottom={-40} />
+          )
         }} />
         <Tab.Screen name="Csevego" component={Csevego} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="message-reply-text-outline" color={color} size={26} marginTop={15} />
-          ),
+            <MaterialCommunityIcons name="message-reply-text-outline" color={color} size={26}  marginBottom={-40} />
+          )
         }} />
         <Tab.Screen name="Kedveles" component={Kedveles} options={{
           headerShown: false, tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="heart-multiple-outline" color={color} size={26} marginTop={15} />
-          ),
+            <MaterialCommunityIcons name="heart-multiple-outline" color={color} size={26}  marginBottom={-40}  />
+          )
         }} />
 
 
