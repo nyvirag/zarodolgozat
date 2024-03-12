@@ -102,12 +102,10 @@ export default () => {
 <Text  style={{ fontSize:30, textAlign:'center', paddingHorizontal:8, color:colors.feher, marginTop:30, marginBottom:5, padding:30, paddingHorizontal:60, 
                backgroundColor: colors.black, borderWidth:2, borderColor:colors.sotetlime, alignSelf:'center', borderRadius:4,}}>Csevegő</Text>
             <View style={{marginTop:40}}>
-      <Text style={{padding: 10, color:colors.feher}}>
-        E-mail:
-      </Text>
+     
       <TextInput
-        style={{height: 50, margin:5, backgroundColor:colors.feher, borderTopLeftRadius:10, borderBottomEndRadius:10}}
-        placeholder="E-mail"
+        style={{height: 50, margin:5, backgroundColor:colors.feher, borderTopLeftRadius:10, borderBottomEndRadius:10,}}
+        placeholder=" E-mail"
         onChangeText={newText => setBevitel1(newText)}
         defaultValue={bevitel1}
         onBlur={() => {
@@ -117,12 +115,10 @@ export default () => {
           }
         }}
       />
-   <Text style={{padding: 10, color:colors.feher}}>
-        Üzenet: 
-      </Text>
+   
 <TextInput
         style={{height: 90, margin:5, backgroundColor:colors.feher, borderTopLeftRadius:10, borderBottomEndRadius:10}}
-        placeholder="Hagyj üzenetet!"
+        placeholder=" Hagyj üzenetet!"
         onChangeText={newText => setBevitel2(newText)}
         defaultValue={bevitel2}
       />

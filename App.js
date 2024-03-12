@@ -36,7 +36,7 @@ import FerfiKategoria from './FerfiKategoria'
 function HomeScreen({ navigation }) {
   return (
     
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.feher }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.black }}>
 
 
         <Text style={{
@@ -156,9 +156,9 @@ const Tab = createBottomTabNavigator();
 const MyTheme = {
   ...DefaultTheme,
   colors: {
-    background: colors.feher,
-    primary: colors.feher,
-    card: colors.feher,
+    background: colors.black,
+    primary: colors.black,
+    card: colors.black,
     text: colors.sotetlime,
     border: colors.sotetlime,
 

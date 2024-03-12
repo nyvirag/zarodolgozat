@@ -122,24 +122,23 @@ const KeresesSzoveg = () => {
             data={data}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View style={{ justifyContent: 'center', alignItems: 'center', height: 250,}}>
+              <View style={{ justifyContent: 'center', alignItems: 'center', height: 270,}}>
                 
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:30}}>
                   <View style={{ flex: 1, height: 1, backgroundColor: colors.feher , }} />
                   
-                  <Text style={{ textAlign: 'center', paddingHorizontal: 8, fontSize: 25, color:colors.feher, fontWeight:'bold', }}>
+                  <Text style={{ textAlign: 'center', paddingHorizontal: 8, fontSize: 25, color:colors.feher, fontWeight:'bold' }}>
                     {item.kategoria_nev}
                   </Text>
                   <View style={{ flex: 1, height: 1, backgroundColor: colors.feher }} />
                 </View>
-
                 <Text style={{ fontSize: 20, textAlign: 'center', color:colors.feher, padding:10 }}>
                   {item.mertek}kg-os Férfi számára 
                 </Text>
                 <Text style={{ fontSize: 20, textAlign: 'center', color:colors.feher }}>
                   {item.etel} 
                 </Text>
-                <Text style={{ fontSize: 20, textAlign: 'center', color:colors.feher, marginTop:20 }}>
+                <Text style={{ fontSize: 20, textAlign: 'center', color:colors.feher,}}>
                  Fehérje: {item.feherje} ,
                  Szénhidrát: {item.szenhidrat} ,
                  Zsír: {item.zsir} 
