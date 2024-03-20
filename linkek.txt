@@ -1,0 +1,15 @@
+https://reactnative.dev/
+
+
+https://reactnative.dev/docs/environment-setup ---- a setup
+
+
+
+https://mui.com/material-ui/material-icons/    ---- ikonok
+
+
+
+https://expo.dev/
+
+
+https://www.npmjs.com/package/react-native-countdown-circle-timer ----circle timer
